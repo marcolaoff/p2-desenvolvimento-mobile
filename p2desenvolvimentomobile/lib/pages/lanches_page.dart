@@ -2,12 +2,32 @@ import 'package:flutter/material.dart';
 import '../cart.dart';
 
 class LanchesPage extends StatelessWidget {
-  // Lista de lanches com descrição e preço
+  // Lista de lanches com nome, preço, descrição e imagem
   final List<Map<String, dynamic>> lanches = [
-    {'name': 'Hambúrguer de Carne', 'price': 15.0, 'description': 'Carne grelhada, queijo e molho especial.'},
-    {'name': 'Hambúrguer Vegetariano', 'price': 17.0, 'description': 'Feito com ingredientes vegetais e molho especial.'},
-    {'name': 'Hot Dog', 'price': 12.0, 'description': 'Salsicha com molho e ketchup no pão fresquinho.'},
-    {'name': 'Cheeseburger', 'price': 18.0, 'description': 'Carne com queijo cheddar derretido e molho.'},
+    {
+      'name': 'Hambúrguer de Carne',
+      'price': 15.0,
+      'description': 'Carne grelhada, queijo e molho especial.',
+      'image': 'assets/images/hamburguer_carne.jpg',
+    },
+    {
+      'name': 'Hambúrguer Vegetariano',
+      'price': 17.0,
+      'description': 'Feito com ingredientes vegetais e molho especial.',
+      'image': 'assets/images/hamburguer_vegetariano.jpg',
+    },
+    {
+      'name': 'Hot Dog',
+      'price': 12.0,
+      'description': 'Salsicha com molho e ketchup no pão fresquinho.',
+      'image': 'assets/images/hot_dog.jpg',
+    },
+    {
+      'name': 'Cheeseburger',
+      'price': 18.0,
+      'description': 'Carne com queijo cheddar derretido e molho.',
+      'image': 'assets/images/cheeseburger.jpg',
+    },
   ];
 
   final Function addToCart;
@@ -29,23 +49,57 @@ class LanchesPage extends StatelessWidget {
               itemBuilder: (context, index) {
                 return Card(
                   margin: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-                  child: ListTile(
-                    title: Text(
-                      lanches[index]['name'], // Nome do lanche
-                      style: TextStyle(fontSize: 18),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          lanches[index]['image'],
+                          width: 100,
+                          height: 100,
+                          fit: BoxFit.cover,
+                        ),
+                        SizedBox(height: 8),
+                        Text(
+                          lanches[index]['name'],
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 4),
+                        Text(
+                          lanches[index]['description'],
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: Colors.grey,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                        SizedBox(height: 8),
+                        Text(
+                          'R\$ ${lanches[index]['price'].toStringAsFixed(2)}',
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 8),
+                        ElevatedButton(
+                          onPressed: () {
+                            addToCart(CartItem(
+                                name: lanches[index]['name'],
+                                price: lanches[index]['price']));
+                          },
+                          child: Text('Adicionar ao Carrinho'),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.green,
+                          ),
+                        ),
+                      ],
                     ),
-                    subtitle: Text(
-                      lanches[index]['description'], // Descrição do lanche
-                      style: TextStyle(fontSize: 14, color: Colors.grey),
-                    ),
-                    trailing: Icon(Icons.add_shopping_cart),
-                    onTap: () {
-                      // Adicionar o lanche ao carrinho
-                      addToCart(CartItem(
-                          name: lanches[index]['name'],
-                          price: lanches[index]['price']
-                      ));
-                    },
                   ),
                 );
               },
