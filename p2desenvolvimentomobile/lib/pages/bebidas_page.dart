@@ -43,7 +43,7 @@ class BebidasPage extends StatelessWidget {
     {
       'name': 'Antarctica',
       'price': 7.5,
-      'description': 'Cerveja Antarctica, 350ml.',
+      'description': 'Cerveja Antarctica, 473ml.',
       'image': 'assets/images/antarctica.jpg',
     },
     {
@@ -51,12 +51,6 @@ class BebidasPage extends StatelessWidget {
       'price': 7.0,
       'description': 'Cerveja Itaipava, 350ml.',
       'image': 'assets/images/itaipava.jpg',
-    },
-    {
-      'name': 'Outras Cervejas',
-      'price': 9.0,
-      'description': 'Outras marcas de cerveja, consulte.',
-      'image': 'assets/images/outras_cervejas.jpg',
     },
     {
       'name': 'Heineken',
@@ -81,12 +75,6 @@ class BebidasPage extends StatelessWidget {
       'price': 5.5,
       'description': 'Suco de uva integral, 300ml.',
       'image': 'assets/images/suco_uva.jpg',
-    },
-    {
-      'name': 'Suco de Maçã',
-      'price': 5.5,
-      'description': 'Suco de maçã natural, 300ml.',
-      'image': 'assets/images/suco_maca.jpg',
     },
   ];
 

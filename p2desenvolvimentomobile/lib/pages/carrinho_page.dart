@@ -64,7 +64,7 @@ class CarrinhoPage extends StatelessWidget {
                   },
                   child: Text('Finalizar Pedido'),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.purple,
+                    backgroundColor: Colors.black,
                     padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
                     textStyle: TextStyle(fontSize: 18),
                   ),

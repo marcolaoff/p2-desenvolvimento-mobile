@@ -23,4 +23,5 @@ flutter:
     - assets/images/hamburguer_vegetariano.jpg
     - assets/images/hot_dog.jpg
     - assets/images/cheeseburger.jpg
+    - assets/images/logo_lanchonete.png
   uses-material-design: true
