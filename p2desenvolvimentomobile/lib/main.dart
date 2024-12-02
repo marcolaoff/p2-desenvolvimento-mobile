@@ -4,7 +4,7 @@ import 'pages/lanches_page.dart';
 import 'pages/bebidas_page.dart';
 import 'pages/carrinho_page.dart';
 import 'pages/finalizar_pedido_page.dart';
-import 'cart.dart';  // O modelo de item de carrinho
+import 'cart.dart'; // O modelo de item de carrinho
 
 void main() {
   runApp(MyApp());
@@ -43,12 +43,17 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Lanchonete App',
+      debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        '/': (context) => HomePage(),
+        // Passando a função addToCart para HomePage
+        '/': (context) => HomePage(addToCart: addToCart),
         '/lanches': (context) => LanchesPage(addToCart: addToCart),
         '/bebidas': (context) => BebidasPage(addToCart: addToCart),
-        '/carrinho': (context) => CarrinhoPage(cartItems: cartItems, removeFromCart: removeFromCart),
+        '/carrinho': (context) => CarrinhoPage(
+          cartItems: cartItems,
+          removeFromCart: removeFromCart,
+        ),
         '/finalizar': (context) => FinalizarPedidoPage(clearCart: clearCart),
       },
     );

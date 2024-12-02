@@ -10,7 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   provider: ^5.0.0
-  google_fonts: ^4.0.3
+  carousel_slider: ^5.0.0
 
 dev_dependencies:
   flutter_test:
@@ -24,4 +24,7 @@ flutter:
     - assets/images/hot_dog.jpg
     - assets/images/cheeseburger.jpg
     - assets/images/logo_lanchonete.png
+    - assets/images/combo1.png
+    - assets/images/combo2.png
+    - assets/images/combo3.png
   uses-material-design: true
