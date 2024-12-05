@@ -50,7 +50,9 @@ Foi utilizado o pacote **[carousel_slider](https://pub.dev/packages/carousel_sli
    git clone https://github.com/seu-usuario/tio-do-sanduba.git](https://github.com/marcolaoff/p2-desenvolvimento-mobile.git)
 3. Instale as dependências: flutter pub get
 
-Equipe
-Integrante 1
-Integrante 2
-Integrante 3
+### Equipe
+[Marco Antônio Lourenci Silva](https://github.com/marcolaoff)
+[Matheus Ferreira Machado](https://github.com/speeky00)
+[Luis Henrique Topan de Lima](https://github.com/lui0908)
+[Adriano Ferreira Junior](https://github.com/adrianoJr07)
+
