@@ -5,15 +5,9 @@ class LanchesPage extends StatelessWidget {
   // Lista de lanches com nome, preço, descrição e imagem
   final List<Map<String, dynamic>> lanches = [
     {
-      'name': 'Hambúrguer de Carne',
-      'price': 15.0,
-      'description': 'Carne grelhada, queijo e molho especial.',
-      'image': 'assets/images/hamburguer_carne.jpg',
-    },
-    {
       'name': 'Hambúrguer Vegetariano',
       'price': 17.0,
-      'description': 'Feito com ingredientes vegetais e molho especial.',
+      'description': 'Feito com hamburguer vegetariano, queijo, alface e tomate.',
       'image': 'assets/images/hamburguer_vegetariano.jpg',
     },
     {
@@ -23,10 +17,35 @@ class LanchesPage extends StatelessWidget {
       'image': 'assets/images/hot_dog.jpg',
     },
     {
-      'name': 'Cheeseburger',
-      'price': 18.0,
-      'description': 'Carne com queijo cheddar derretido e molho.',
-      'image': 'assets/images/cheeseburger.jpg',
+      'name': 'X-Salada',
+      'price': 20.0,
+      'description': 'Hamburguer, Mussarela, Alface e Tomate.',
+      'image': 'assets/images/x_salada.jpg',
+    },
+    {
+      'name': 'X-Egg',
+      'price': 26.0,
+      'description': 'Hamburguer, 2 Ovos, Mussarela, Alface e Tomate.',
+      'image': 'assets/images/x_egg.jpg',
+    },
+    {
+      'name': 'X-Egg Bacon',
+      'price': 30.0,
+      'description': 'Hamburguer, Ovo, Mussarela, Bacon, Alface e Tomate.',
+      'image': 'assets/images/x_egg_bacon.jpg',
+    },
+    {
+      'name': 'X-Bacon',
+      'price': 28.0,
+      'description': 'Hamburguer, Mussarela, Bacon, Alface e Tomate.',
+      'image': 'assets/images/x_bacon.jpg',
+    },
+    {
+      'name': 'X-Tudo',
+      'price': 33.0,
+      'description':
+      'Hamburguer, Mussarela, Presunto, Ovo, Bacon, Milho, Alface e Tomate.',
+      'image': 'assets/images/x_tudo.jpg',
     },
   ];
 

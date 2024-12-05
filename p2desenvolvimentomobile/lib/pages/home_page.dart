@@ -10,21 +10,31 @@ class HomePage extends StatelessWidget {
   // Lista de combos disponíveis
   final List<Map<String, dynamic>> combos = [
     {
-      'name': 'Combo 1: Hambúrguer + Coca Cola',
-      'lanche': {'name': 'Hambúrguer de Carne', 'price': 15.0},
-      'bebida': {'name': 'Coca Cola Lata', 'price': 6.0},
+      'name': 'Combo 1: X-Salada + Coca Cola',
+      'items': [
+        {'name': 'X-Salada', 'price': 20.0},
+        {'name': 'Coca Cola Lata', 'price': 2.99},
+      ],
+      'totalPrice': 22.99,
       'image': 'assets/images/combo1.png',
     },
     {
-      'name': 'Combo 2: Cheeseburger + Fanta Laranja',
-      'lanche': {'name': 'Cheeseburger', 'price': 18.0},
-      'bebida': {'name': 'Fanta Laranja', 'price': 5.5},
+      'name': 'Combo 2: Hot Dog + Coca Cola',
+      'items': [
+        {'name': 'Hot Dog', 'price': 12.0},
+        {'name': 'Coca Cola Lata', 'price': 4.99},
+      ],
+      'totalPrice': 16.99,
       'image': 'assets/images/combo2.png',
     },
     {
-      'name': 'Combo 3: Hot Dog + Suco de Laranja',
-      'lanche': {'name': 'Hot Dog', 'price': 12.0},
-      'bebida': {'name': 'Suco de Laranja', 'price': 5.0},
+      'name': 'Combo 3: 2 X-Salada + X-Tudo',
+      'items': [
+        {'name': 'X-Salada', 'price': 20.0},
+        {'name': 'X-Salada', 'price': 20.0},
+        {'name': 'X-Tudo', 'price': 33.0},
+      ],
+      'totalPrice': 70.0,
       'image': 'assets/images/combo3.png',
     },
   ];
@@ -40,7 +50,7 @@ class HomePage extends StatelessWidget {
         color: Colors.black, // Fundo da tela agora é preto
         child: Column(
           children: [
-            // Logo no topo, mais próximo do início
+            // Logo no topo
             Padding(
               padding: const EdgeInsets.only(top: 16.0),
               child: Image.asset(
@@ -49,7 +59,7 @@ class HomePage extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
-            // Carrossel sem o logo
+            // Carrossel com os combos atualizados
             Expanded(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -58,15 +68,13 @@ class HomePage extends StatelessWidget {
                     items: combos.map((combo) {
                       return GestureDetector(
                         onTap: () {
-                          // Adiciona o combo ao carrinho e navega para o carrinho
-                          addToCart(CartItem(
-                            name: combo['lanche']['name'],
-                            price: combo['lanche']['price'],
-                          ));
-                          addToCart(CartItem(
-                            name: combo['bebida']['name'],
-                            price: combo['bebida']['price'],
-                          ));
+                          // Adiciona os itens do combo ao carrinho
+                          for (var item in combo['items']) {
+                            addToCart(CartItem(
+                              name: item['name'],
+                              price: item['price'],
+                            ));
+                          }
                           Navigator.pushNamed(context, '/carrinho');
                         },
                         child: Stack(
@@ -80,13 +88,26 @@ class HomePage extends StatelessWidget {
                             Container(
                               color: Colors.black54,
                               padding: EdgeInsets.all(8.0),
-                              child: Text(
-                                combo['name'],
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.bold,
-                                ),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Text(
+                                    combo['name'],
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Text(
+                                    'R\$ ${combo['totalPrice'].toStringAsFixed(2)}',
+                                    style: TextStyle(
+                                      color: Colors.orange,
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
                           ],

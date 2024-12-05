@@ -19,10 +19,6 @@ dev_dependencies:
 flutter:
   assets:
     - assets/images/
-    - assets/images/hamburguer_carne.jpg
-    - assets/images/hamburguer_vegetariano.jpg
-    - assets/images/hot_dog.jpg
-    - assets/images/cheeseburger.jpg
     - assets/images/logo_lanchonete.png
     - assets/images/combo1.png
     - assets/images/combo2.png
