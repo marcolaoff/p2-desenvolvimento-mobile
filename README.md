@@ -47,7 +47,7 @@ Foi utilizado o pacote **[carousel_slider](https://pub.dev/packages/carousel_sli
 1. Instale o Flutter: [Guia Oficial](https://flutter.dev/docs/get-started/install).  
 2. Clone este repositório:  
    ```bash
-   git clone https://github.com/seu-usuario/tio-do-sanduba.git
+   git clone https://github.com/seu-usuario/tio-do-sanduba.git](https://github.com/marcolaoff/p2-desenvolvimento-mobile.git)
 3. Instale as dependências: flutter pub get
 
 Equipe
