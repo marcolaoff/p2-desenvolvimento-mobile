@@ -1,4 +1,4 @@
-# p2-desenvolvimento-mobile
+# P2 Desenvolvimento Mobile
 # Projeto: Tio do Sanduba  
 
 ## Descrição  
