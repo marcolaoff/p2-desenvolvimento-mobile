@@ -51,8 +51,8 @@ Foi utilizado o pacote **[carousel_slider](https://pub.dev/packages/carousel_sli
 3. Instale as dependências: flutter pub get
 
 ### Equipe
-[Marco Antônio Lourenci Silva](https://github.com/marcolaoff)
-[Matheus Ferreira Machado](https://github.com/speeky00)
-[Luis Henrique Topan de Lima](https://github.com/lui0908)
-[Adriano Ferreira Junior](https://github.com/adrianoJr07)
+-[Marco Antônio Lourenci Silva](https://github.com/marcolaoff)
+-[Matheus Ferreira Machado](https://github.com/speeky00)
+-[Luis Henrique Topan de Lima](https://github.com/lui0908)
+-[Adriano Ferreira Junior](https://github.com/adrianoJr07)
 
